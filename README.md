@@ -6,7 +6,7 @@ This site tracks all trip details — flights, days, routes, markets, checklists
 
 ---
 
-## 🧭 **Trip Overview**
+## 🧭  **Trip Overview**
 
 **Dates:** 21 Dec 2025 → 01 Jan 2026  
 **PNR:** `8XTHPC`  
