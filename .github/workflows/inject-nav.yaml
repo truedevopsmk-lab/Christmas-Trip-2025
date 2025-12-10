@@ -1,0 +1,92 @@
+name: Inject Navigation Menu
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  inject:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build Navigation Menu
+        id: nav
+        shell: bash
+        run: |
+          REPO_NAME=$(basename "$GITHUB_REPOSITORY")
+          USER_NAME=$(echo "$GITHUB_REPOSITORY" | cut -d'/' -f1)
+          BASE_URL="https://${USER_NAME}.github.io/${REPO_NAME}"
+
+          echo "Generating nav..."
+          NAV="## 📘 Navigation Menu\n"
+
+          declare -a entries=()
+
+          # Find README.md files safely
+          while IFS= read -r -d '' readme; do
+            folder=$(dirname "$readme")
+
+            # Skip root README — Home will be added manually
+            if [[ "$folder" == "." ]]; then
+              continue
+            fi
+
+            name=$(basename "$folder")
+            pretty=$(echo "$name" | sed 's/-/ /g')
+
+            # URL-encode path (pure bash)
+            encoded=$(printf "%s" "$folder" | jq -sRr @uri)
+
+            entries+=("$pretty|$encoded")
+          done < <(find . -type f -name "README.md" -print0)
+
+          # Sort alphabetically
+          IFS=$'\n' sorted=($(sort <<<"${entries[*]}"))
+          unset IFS
+
+          # Add Home FIRST
+          NAV+="[🏠 Home](${BASE_URL}/) • "
+
+          for entry in "${sorted[@]}"; do
+            pretty="${entry%%|*}"
+            encoded="${entry##*|}"
+            NAV+="[$pretty](${BASE_URL}/${encoded}/) • "
+          done
+
+          NAV+="\n\n---\n<!-- inject-nav -->"
+
+          {
+            echo "nav<<EOF"
+            echo -e "$NAV"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Inject into README.md
+        shell: bash
+        run: |
+          NAV_CONTENT="${{ steps.nav.outputs.nav }}"
+
+          echo "Injecting nav..."
+          while IFS= read -r -d '' file; do
+            if grep -q "<!-- inject-nav -->" "$file"; then
+              echo "Skipping $file — already injected."
+              continue
+            fi
+
+            tmp=$(mktemp)
+            echo -e "$NAV_CONTENT" > "$tmp"
+            cat "$file" >> "$tmp"
+            mv "$tmp" "$file"
+
+            echo "Injected: $file"
+
+          done < <(find . -type f -name "README.md" -print0)
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Auto-injected nav menu"
