@@ -1,8 +1,4 @@
-## 📘 Navigation Menu
-[🏠 Home](https://truedevopsmk-lab.github.io/Christmas-Trip-2025/) • [3 Day Budapest Itinerary (Dec 21–23)](https://truedevopsmk-lab.github.io/Christmas-Trip-2025/.%2F3-Day%20Budapest%20Itinerary%20%28Dec%2021%E2%80%9323%29/) • [Attractions, Cafés & Local Specialties](https://truedevopsmk-lab.github.io/Christmas-Trip-2025/.%2FAttractions%2C%20Caf%C3%A9s%20%26%20Local%20Specialties/) • [Budapest Coffee + Pastry Crawl](https://truedevopsmk-lab.github.io/Christmas-Trip-2025/.%2FBudapest%20Coffee%20%2B%20Pastry%20Crawl/) • [Budapest Time of the Day](https://truedevopsmk-lab.github.io/Christmas-Trip-2025/.%2FBudapest-Time-of-the-Day/) • [Trip Packing Checklist](https://truedevopsmk-lab.github.io/Christmas-Trip-2025/.%2FTrip%20Packing%20Checklist/) • 
 
----
-<!-- inject-nav -->
 # ✈️ Europe Winter Trip 2025 — _Muthu & Shivani_
 
 A beautifully curated 10-day winter Eurotrip covering **Budapest → Bratislava (+Vienna) → Prague → Wrocław** from **21 Dec 2025 to 31 Dec 2025**.
