@@ -1,82 +1,169 @@
-A smooth flow based on **your hotel location**, **bookings**, **sunrise/sunset**, and **winter daylight**
+# ✈️ Europe Winter Trip 2025 — _Muthu & Shivani_
 
-Formatted exactly as you asked:
+A beautifully curated 10-day winter Eurotrip covering **Budapest → Bratislava (+Vienna) → Prague → Wrocław** from **21 Dec 2025 to 31 Dec 2025**.
 
-# 🌟 📅 **3-Day Budapest Itinerary (Dec 21–23)**
-
-**With Coffee, Pastries, Veg-Friendly Food, Budget Notes**
+This site tracks all trip details — flights, days, routes, markets, checklists, and logistics.
 
 ---
 
-# **📍 Day 1 — December 21 (Arrival + Light Exploration)**
+## 🧭 **Trip Overview**
 
-| Time                            | Plan                                                                                                                                        |
-| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| **🌅 Morning**                  | ✈️ *Travel Day — No local activities*                                                                                                       |
-| **12:35 PM**                    | Land at BUD Airport → Taxi to Hotel Rum Budapest (arrive ~2:00 PM)                                                                          |
-| **🌤 Afternoon (3:00–4:00 PM)** | **Dorothy Coffee ☕ 💸 (Budget)** — Your first Budapest specialty coffee stop  <br>Pastry: light croissant/babka slice (vegetarian friendly) |
-| **4:00–5:15 PM**                | **Danube Promenade + Great Market Hall** (indoor, warm, perfect on arrival day) <br>Try veg-friendly snacks + chimney cake stalls           |
-| **🌆 Evening (6:30–8:00 PM)**   | **Dinner:**  <br>**Menza 💵 (Mid-range, veg options, not touristy)** OR <br>**Napfényes Restaurant 💸 (Budget, 100% veg Hungarian dishes)** |
-| **🌙 Night (8:15–10:00 PM)**    | Stroll through **Vörösmarty Square Christmas Market** for mulled wine, pastries, festive vibes                                              |
+**Dates:** 21 Dec 2025 → 01 Jan 2026  
+**PNR:** `8XTHPC`  
+**Passengers:**  
+- **Muthukumar Sambandam** — Ticket 2202236467432-33  
+- **Shivani Kakhandki** — Ticket 2202236467434-35  
 
----
-
-# **📍 Day 2 — December 22 (Szechenyi Bath + River Cruise + Parliament Sunset)**
-
-| Time                                 | Plan                                                                                                    |
-| ------------------------------------ | ------------------------------------------------------------------------------------------------------- |
-| **🌅 Morning (8:00–9:15 AM)**        | **Fekete Coffee ☕ 💸 (Budget)** — On your route to Szechenyi <br>Great coffee + small pastries          |
-| **9:30–10:45 AM**                    | **Szechenyi Thermal Bath** (Your pre-booked slot before 11 AM)                                          |
-| **🌤 Late Morning (11:15–12:15 PM)** | **Brunch:** **Cirkusz Café 💵 (Mid-range, veg-friendly)** <br>Great pancakes, shakshuka, avo toast      |
-| **🍰 12:30–1:15 PM**                 | **Málna Pastry Shop 🍰 💵 (Great value)** <br>Award-winning cakes, raspberry mousse — must-visit        |
-| **🌊 2:30–3:45 PM**                  | **Historic Danube River Cruise** (your pre-booked activity) <br>Views: Parliament, Castle, Gellért Hill |
-| **🌇 4:00–5:00 PM**                  | **Parliament Sunset Walk** + **Shoes on the Danube** memorial <br>Perfect golden hour photos            |
-| **☕ 5:00–5:45 PM**                   | **Espresso Embassy ☕ 💸 (Budget)** — Best coffee near Parliament                                        |
-| **🌙 Evening (6:30–8:00 PM)**        | **Dinner:**  <br>**Dobrumba 💵 (Mid-range, Middle Eastern, vegetarian-friendly)**                       |
-| **9:00 PM**                          | Optional: **Ruas Bar / Gellért Hill night walk / Danube night photos**                                  |
+**Route:**  
+**Budapest → Bratislava → Vienna (day-trip) → Bratislava → Prague → Wrocław → Bangalore**
 
 ---
 
-# **📍 Day 3 — December 23 (Sunrise at Fisherman’s Bastion + Buda Castle + Basilica + Christmas Markets)**
+## ✈️ **Flight Plan**
 
-| Time                                | Plan                                                                                                                     |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| **🌅 Early Morning (7:00–9:00 AM)** | Taxi to **Fisherman’s Bastion (sunrise)** <br>Explore Matthias Church & Castle District <br>Walk/funicular down          |
-| **🥐 9:30–10:15 AM**                | **Freyja – Croissant Story 🥐 💵** <br>Premium croissants (pistachio, almond, vanilla)                                   |
-| **☕ 10:45–11:30 AM**                | **My Little Melbourne ☕ 💸 (Budget)** <br>OG specialty coffee shop, excellent for espresso                               |
-| **🌤 Midday (11:45–1:00 PM)**       | **St. Stephen’s Basilica + Dome Viewpoint** (weather permitting)                                                         |
-| **🍽️ 1:15–2:30 PM**                | **Lunch:**  <br>**Hungarikum Bisztró 💵 (Mid-range, veg options, amazing value)** <br>*Reserve in advance — gets full!*  |
-| **🎄 2:30–4:00 PM**                 | **Christmas Markets Tour:** <br>Basilica Market → Vörösmarty Square <br>Try flódni, strudel, chimney cake (veg-friendly) |
-| **🌇 4:00–4:30 PM**                 | **Sunset from Liberty Bridge** (5–7 mins walk from your hotel)                                                           |
-| **🌙 Evening (6:30–8:00 PM)**       | **Dinner:**  <br>**Napfényes Restaurant 💸 (Budget, excellent veg Hungarian food)** OR <br>**Hummus Bar 💸 (Budget)**    |
-| **8:15 PM onwards**                 | Optional rooftop drink: **High Note Skybar** (views!)                                                                    |
+### **Outbound — BLR → BUD (21 Dec 2025)**  
+| Segment | Flight | Aircraft | Time | Notes |
+|--------|--------|----------|------|-------|
+| BLR → MUC | LH765 | A350-900 | 02:50 → 08:10 | Layover 3h10m |
+| MUC → BUD | LH1676 | A320 | 11:20 → 12:35 | Arrive Budapest |
+
+### **Return — WRO → BLR (31 Dec 2025 → 01 Jan 2026)**  
+| Segment | Flight | Aircraft | Time | Notes |
+|--------|--------|----------|------|-------|
+| WRO → MUC | LH1635 | CRJ900 | 06:00 → 07:10 | Layover 5h05m |
+| MUC → BLR | LH764 | A350-900 | 12:15 → 01:05 (+1) | Arrive BLR 01:05 |
+
+**Baggage:** 1×23kg checked · 1×8kg carry-on · 1 personal item
+
+---
+
+## 🗓️ **Final Itinerary (City-by-City)**
+
+### **21 Dec — Arrive Budapest 🇭🇺**
+- Land 12:35 → check-in → Basilica Market → Vörösmarty Market  
+- Evening thermal bath (Gellért / Rudas)
+
+### **22 Dec — Budapest**
+- Castle Hill, Fisherman's Bastion, Matthias Church  
+- Chain Bridge → Great Market Hall  
+- Evening markets + optional ruin bar
 
 ---
 
-# 🎉 **Quick Budget Summary for Food Spots**
-
-### 💸 **Budget (₹800–₹1,500 per person range equivalent)**
-
-* Norma
-* Fekete Coffee
-* Dorothy Coffee
-* Espresso Embassy
-* Tamp & Pull
-* Madal Coffee
-* Napfényes Restaurant
-* Hummus Bar
-
-### 💵 **Mid-range (₹1,500–₹3,000 per person)**
-
-* Menza
-* Dobrumba
-* Cirkusz Café
-* Freyja (pastries)
-* Málna Pastry (cakes)
-* Hungarikum Bisztró
-
-### 💎 **Expensive**
-
-(None added unless you ask — keeping it aligned to your budget preference!)
+### **23 Dec — Budapest (Buffer Day)**
+- Light sightseeing / museums / shopping  
+- Prepare for next-day travel
 
 ---
+
+### **24 Dec — Budapest → Bratislava → Vienna Day Trip 🇸🇰🇦🇹**
+- Morning train **Budapest → Bratislava (2.5–3 hrs)**  
+- Drop bags, then **Bratislava → Vienna (≈1 hr)**  
+- Explore Vienna Christmas markets (Rathausplatz, Stephansplatz)  
+- **Return late evening to Bratislava**
+
+---
+
+### **25 Dec — Christmas in Bratislava**
+- Slow Old Town walk, cafes, riverfront  
+- Limited openings → relaxed Christmas vibes
+
+---
+
+### **26 Dec — Bratislava (Full Day)**
+- Explore Bratislava properly (Devin Castle if open)  
+- Prep trains for next morning
+
+---
+
+### **27 Dec — Bratislava → Prague 🇨🇿**
+- Morning train (~3.5–4 hrs)  
+- Afternoon: Charles Bridge, Old Town Square, Christmas markets  
+- Night stay in Prague
+
+---
+
+### **28 Dec — Prague → Wrocław 🇵🇱**
+- Morning free in Prague  
+- Train to Wrocław (~4–5 hrs)  
+- Evening wander around Rynek (Old Town Square)
+
+---
+
+### **29–30 Dec — Wrocław (3 nights total)**
+- Market Square, Cathedral Island, Racławice Panorama  
+- Optional Kraków day trip on the 30th  
+- Cozy cafes & winter markets
+
+---
+
+### **31 Dec — Depart Wrocław → BLR**
+- Early flight 06:00 → MUC → BLR  
+- Arrive **01 Jan 2026, 01:05**
+
+---
+
+## 🎄 **Christmas Market Notes**
+
+- **Budapest:** Basilica & Vörösmarty markets alive during your stay  
+- **Vienna:** Markets run until ~Dec 26  
+- **Bratislava:** Active through late Dec  
+- **Prague:** Runs till early January  
+- **Wrocław:** Runs **21 Nov → 7 Jan**
+
+**Note:** 24–26 Dec = earlier closures & limited restaurants. Markets remain the best food & activity options.
+
+---
+
+## 🚆 **Inter-City Travel Summary**
+
+| Route | Duration | Notes |
+|-------|----------|-------|
+| Budapest → Bratislava | 2.5–3 hrs | Frequent trains |
+| Bratislava → Vienna | ~1 hr | Perfect for a day trip |
+| Bratislava → Prague | 3.5–4 hrs | Book morning departure |
+| Prague → Wrocław | 4–5 hrs | Direct / 1-change options |
+
+**Recommended platforms:**  
+**ÖBB**, **RegioJet**, **Trainline**, **RailEurope**
+
+---
+
+## 🧰 **Logistics & Prep Checklist**
+
+### Before Trip
+- Install **Lufthansa App** → add PNR  
+- Set reminder for **API submission** (opens 23 hr before departure)  
+- Book all trains (high Christmas demand)  
+- Confirm hotels in central districts  
+- Add weather cards for all cities
+
+### Packing Essentials
+- Winter coat, thermals, boots, scarf, gloves  
+- Universal adapter + power bank  
+- Lip balm & moisturizer (cold climate)  
+- EUR / CZK / PLN / HUF (small amounts)
+
+---
+
+## 🗃️ **Files / Links This Repo May Include**
+- `/itinerary/` → detailed day-plans  
+- `/trains/` → recommended trains, timings, booking links  
+- `/packing/` → packing checklist  
+- `/budget/` → estimated spend tracker  
+- `/maps/` → key map screenshots or GPX routes  
+- `/photos/` → trip gallery (post-trip)
+
+---
+
+## ⭐ **Next Actions**
+- [ ] Add booking confirmations  
+- [ ] Add train schedules & preferences  
+- [ ] Add restaurant shortlist per city  
+- [ ] Add packing list file  
+- [ ] Add “Live Weather Widget” if using a GitHub Pages theme  
+
+---
+
+### **Created with ❤️ by Muthu & Shivani’s Travel Brain**
+
