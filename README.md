@@ -27,10 +27,12 @@ This site tracks all trip details — flights, days, routes, markets, checklists
 ## ✈️ **Flight Plan**
 
 ### **Outbound — BLR → BUD (21 Dec 2025)**  
+
 | Segment | Flight | Aircraft | Time | Notes |
 |--------|--------|----------|------|-------|
 | BLR → MUC | LH765 | A350-900 | 02:50 → 08:10 | Layover 3h10m |
 | MUC → BUD | LH1676 | A320 | 11:20 → 12:35 | Arrive Budapest |
+
 
 ### **Return — WRO → BLR (31 Dec 2025 → 01 Jan 2026)**  
 | Segment | Flight | Aircraft | Time | Notes |
@@ -38,7 +40,9 @@ This site tracks all trip details — flights, days, routes, markets, checklists
 | WRO → MUC | LH1635 | CRJ900 | 06:00 → 07:10 | Layover 5h05m |
 | MUC → BLR | LH764 | A350-900 | 12:15 → 01:05 (+1) | Arrive BLR 01:05 |
 
+
 **Baggage:** 1×23kg checked · 1×8kg carry-on · 1 personal item
+
 
 ---
 
