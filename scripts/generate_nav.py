@@ -2,31 +2,30 @@
 import os
 import urllib.parse
 import pathlib
+import re
 
 GITHUB_REPOSITORY = os.environ.get("GITHUB_REPOSITORY", "")
 if GITHUB_REPOSITORY:
     USER, REPO = GITHUB_REPOSITORY.split("/",1)
     BASE_URL = f"https://{USER}.github.io/{REPO}"
 else:
-    # fallback for local testing
     USER = "USERNAME"
     REPO = "REPO"
     BASE_URL = f"https://{USER}.github.io/{REPO}"
 
 def encode_path(path):
-    # Encode each path segment, keep slashes
-    parts = [urllib.parse.quote(p) for p in path.strip("./").split(os.sep) if p]
+    parts = [urllib.parse.quote(p) for p in os.path.normpath(path).strip("./").split(os.sep) if p]
     return "/".join(parts)
 
 def find_readme_folders():
     folders = []
     for root, dirs, files in os.walk("."):
-        # skip .git and .github
-        if any(part in (".git", ".github") for part in pathlib.Path(root).parts):
+        parts = pathlib.Path(root).parts
+        if ".git" in parts or ".github" in parts:
             continue
         if "README.md" in files:
             folders.append(root)
-    return sorted(folders)  # natural tree order
+    return sorted(folders)
 
 def build_nav(folders):
     entries = []
@@ -37,39 +36,36 @@ def build_nav(folders):
         pretty = name.replace("-", " ")
         encoded = encode_path(folder)
         entries.append((folder, pretty, encoded))
-    # sort by folder path to maintain tree/natural order
     entries.sort(key=lambda x: x[0].lower())
-    # Build nav string: Home first
-    nav = "## 📘 Navigation Menu\n"
-    nav += f"[🏠 Home]({BASE_URL}/) • "
+    parts = [f"[🏠 Home]({BASE_URL}/) •"]
     for _, pretty, encoded in entries:
-        nav += f"[{pretty}]({BASE_URL}/{encoded}/) • "
-    nav += "\n---\n<!-- inject-nav -->"
-    return nav
+        parts.append(f"[{pretty}]({BASE_URL}/{encoded}/) •")
+    # join into single line with spaces, ensure no literal \n remains
+    nav_line = "## 📘 Navigation Menu\n" + " ".join(parts) + "\n\n---\n<!-- inject-nav -->"
+    # replace any accidental literal backslash-n sequences
+    nav_line = nav_line.replace("\\n", "\n")
+    return nav_line
 
-def remove_existing_nav(content):
-    marker = "<!-- inject-nav -->"
-    idx = content.find(marker)
-    if idx == -1:
-        return content
-    # remove from start up to and including marker, then strip following blank lines
-    after = content[idx+len(marker):]
-    # drop leading whitespace/newlines
-    after = after.lstrip("\n\r ")
-    return after
+def remove_all_existing_navs(content):
+    pattern = re.compile(r"## 📘 Navigation Menu[\s\S]*?<!-- inject-nav -->", re.MULTILINE)
+    new = re.sub(pattern, "", content)
+    return new.lstrip("\r\n ")
 
 def inject_nav_into_readme(file_path, nav):
     with open(file_path, "r", encoding="utf-8") as f:
         content = f.read()
-    rest = remove_existing_nav(content)
+    rest = remove_all_existing_navs(content)
     new_content = nav + "\n\n" + rest
     with open(file_path, "w", encoding="utf-8") as f:
         f.write(new_content)
 
-def create_index_md_for_folder(folder, folders_set):
-    # create index.md listing immediate child folders (only those with README.md)
+def create_index_md_for_folder(folder):
     child_links = []
-    for p in sorted(os.listdir(folder)):
+    try:
+        entries = sorted(os.listdir(folder))
+    except FileNotFoundError:
+        return
+    for p in entries:
         child = os.path.join(folder, p)
         if os.path.isdir(child):
             readme = os.path.join(child, "README.md")
@@ -90,14 +86,11 @@ def create_index_md_for_folder(folder, folders_set):
 def main():
     folders = find_readme_folders()
     nav = build_nav(folders)
-    # Inject nav into all README.md
     for folder in folders:
         readme = os.path.join(folder, "README.md")
         inject_nav_into_readme(readme, nav)
-    # Create index.md in each folder listing child folders
-    folders_set = set(folders)
     for folder in folders:
-        create_index_md_for_folder(folder, folders_set)
+        create_index_md_for_folder(folder)
     print("Done. Navigation injected and index.md files created where applicable.")
 
 if __name__ == '__main__':

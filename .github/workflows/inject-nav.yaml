@@ -1,48 +1,40 @@
 name: Inject Navigation Menu
 
-# Run on pushes to main and via manual dispatch
 on:
   push:
-    branches: [ "main" ]
+    branches: [ main ]
   workflow_dispatch:
 
-# Allow workflow to write back to repo (required for commit)
 permissions:
   contents: write
 
-# Avoid concurrent runs colliding
 concurrency:
-  group: inject-nav-${{ github.repository }}
-  cancel-in-progress: false
+  group: inject-nav-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   inject:
+    # don't run when the committer is the bot to prevent loops
+    if: ${{ github.actor != 'github-actions[bot]' }}
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository (with push credentials)
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          # keep the GITHUB_TOKEN credentials so commit/push works
-          persist-credentials: true
           fetch-depth: 0
+          persist-credentials: true
 
-      - name: Ensure scripts are executable
+      - name: Install dependencies
+        run: sudo apt-get update && sudo apt-get install -y jq python3
+
+      - name: Run nav generator
+        env:
+          GITHUB_REPOSITORY: ${{ github.repository }}
         run: |
-          chmod +x scripts/inject-nav.sh || true
+          python3 scripts/generate_nav.py
 
-      - name: Install dependencies (jq)
-        run: |
-          sudo apt-get update -y
-          sudo apt-get install -y jq
-
-      - name: Run injector script
-        # keep shell/bash to preserve behaviour
-        run: |
-          bash scripts/inject-nav.sh
-
-      - name: Commit & push changes
+      - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Auto-updated navigation menu"
-          # leave default token; will use GITHUB_TOKEN with repo write perms
+          commit_message: "Auto-update navigation menu"
