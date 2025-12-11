@@ -44,7 +44,7 @@ def build_nav(folders):
     nav += f"[🏠 Home]({BASE_URL}/) • "
     for _, pretty, encoded in entries:
         nav += f"[{pretty}]({BASE_URL}/{encoded}/) • "
-    nav += "\n\n---\n<!-- inject-nav -->"
+    nav += "\n---\n<!-- inject-nav -->"
     return nav
 
 def remove_existing_nav(content):
