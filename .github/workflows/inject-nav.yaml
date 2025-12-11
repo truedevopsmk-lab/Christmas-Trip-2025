@@ -1,9 +1,17 @@
 name: Inject Navigation Menu
-
 on:
   push:
     branches: [ main ]
   workflow_dispatch:
+
+# Grant write permission so commit/push works
+permissions:
+  contents: write
+
+# Cancel previous runs for this repo to avoid concurrent commits/races
+concurrency:
+  group: ${{ github.repository }}-inject-nav
+  cancel-in-progress: true
 
 jobs:
   inject:
@@ -12,81 +20,115 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          # needed so git-auto-commit-action can push with GITHUB_TOKEN
+          persist-credentials: true
 
-      - name: Build Navigation Menu
-        id: nav
+      - name: Build and inject navigation
+        id: inject
         shell: bash
         run: |
+          set -euo pipefail
+          echo "Repo: $GITHUB_REPOSITORY"
           REPO_NAME=$(basename "$GITHUB_REPOSITORY")
           USER_NAME=$(echo "$GITHUB_REPOSITORY" | cut -d'/' -f1)
           BASE_URL="https://${USER_NAME}.github.io/${REPO_NAME}"
 
-          echo "Generating nav..."
-          NAV="## 📘 Navigation Menu\n"
+          echo "Scanning repository for README.md files..."
+          declare -a entries
 
-          declare -a entries=()
-
-          # Find README.md files safely
+          # find README.md safely (handles spaces, unicode)
           while IFS= read -r -d '' readme; do
             folder=$(dirname "$readme")
 
-            # Skip root README — Home will be added manually
-            if [[ "$folder" == "." ]]; then
+            # Ignore repo root and .github and hidden folders
+            if [[ "$folder" == "." ]] || [[ "$folder" == .github* ]] || [[ "$folder" == .git* ]]; then
               continue
             fi
 
+            # Human friendly name
             name=$(basename "$folder")
-            pretty=$(echo "$name" | sed 's/-/ /g')
+            pretty=$(echo "$name" | sed -E 's/[-_]+/ /g')
 
-            # URL-encode path (pure bash)
-            encoded=$(printf "%s" "$folder" | jq -sRr @uri)
+            # URL-encode path safely via python (pass as arg to avoid quoting headaches)
+            encoded=$(python3 - <<'PY' "$folder"
+import sys, urllib.parse
+p = sys.argv[1].lstrip("./")
+print(urllib.parse.quote(p))
+PY
+)
 
-            entries+=("$pretty|$encoded")
-          done < <(find . -type f -name "README.md" -print0)
+            # store "sortkey|pretty|encoded|folder" (sortkey uses path to get stable natural order)
+            entries+=("$folder|$pretty|$encoded")
+          done < <(find . -type f -iname "README.md" -print0)
 
-          # Sort alphabetically
-          IFS=$'\n' sorted=($(sort <<<"${entries[*]}"))
+          # Sort entries by path (natural tree order)
+          IFS=$'\n' sorted=($(printf '%s\n' "${entries[@]}" | sort -t'|' -k1))
           unset IFS
 
-          # Add Home FIRST
+          # Build nav: Home first
+          NAV="## 📘 Navigation Menu\n"
           NAV+="[🏠 Home](${BASE_URL}/) • "
 
-          for entry in "${sorted[@]}"; do
-            pretty="${entry%%|*}"
-            encoded="${entry##*|}"
-            NAV+="[$pretty](${BASE_URL}/${encoded}/) • "
+          for item in "${sorted[@]}"; do
+            # item format: folder|pretty|encoded
+            folder="${item%%|*}"
+            rest="${item#*|}"
+            pretty="${rest%%|*}"
+            encoded="${rest##*|}"
+            NAV+="[${pretty}](${BASE_URL}/${encoded}/) • "
           done
 
           NAV+="\n\n---\n<!-- inject-nav -->"
 
-          {
-            echo "nav<<EOF"
-            echo -e "$NAV"
-            echo "EOF"
-          } >> "$GITHUB_OUTPUT"
+          # Save NAV to a file for debugging and output
+          echo "$NAV" > .generated_nav.md
+          echo "Generated nav:"
+          echo "----------------"
+          echo "$NAV"
+          echo "----------------"
 
-      - name: Inject into README.md
-        shell: bash
-        run: |
-          NAV_CONTENT="${{ steps.nav.outputs.nav }}"
-
-          echo "Injecting nav..."
-          while IFS= read -r -d '' file; do
+          # Function: remove existing injected nav block (from '## 📘 Navigation Menu' until marker) and prepend new nav
+          inject_into_file() {
+            local file="$1"
+            tmp="$(mktemp)"
+            # If file already contains marker, remove from '## 📘 Navigation Menu' through marker
             if grep -q "<!-- inject-nav -->" "$file"; then
-              echo "Skipping $file — already injected."
-              continue
+              awk 'BEGIN{skip=0}
+                /^## 📘 Navigation Menu/ { skip=1; next }
+                /<!-- inject-nav -->/ { skip=0; next }
+                { if(!skip) print }
+              ' "$file" > "$tmp"
+            else
+              # keep original file as-is (no removal)
+              cp "$file" "$tmp"
             fi
+            # Prepend fresh nav and original content
+            {
+              echo -e "$NAV"
+              cat "$tmp"
+            } > "$file"
+            rm -f "$tmp"
+            echo "Injected nav into: $file"
+          }
 
-            tmp=$(mktemp)
-            echo -e "$NAV_CONTENT" > "$tmp"
-            cat "$file" >> "$tmp"
-            mv "$tmp" "$file"
+          # Iterate all README.md and inject (including root README.md)
+          while IFS= read -r -d '' file; do
+            inject_into_file "$file"
+          done < <(find . -type f -iname "README.md" -print0)
 
-            echo "Injected: $file"
-
-          done < <(find . -type f -name "README.md" -print0)
+          # expose output for later steps if needed
+          echo "::set-output name=nav_file::.generated_nav.md"
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Auto-injected nav menu"
+          commit_message: "Auto-injected navigation menu"
+          # optionally uncomment to force push to a branch:
+          # push_options: --force
+
+      - name: Show git status (debug)
+        run: |
+          git --no-pager log -n 3 --pretty=oneline || true
+          git status --porcelain || true
+
