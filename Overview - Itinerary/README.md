@@ -4,7 +4,7 @@
 ---
 <!-- inject-nav -->
 
-
+<div align="center">
 ---
 <h1>✨ EUROPE WINTER EXPEDITION 2025 ✨</h1>
 <h3>A Curated Journey Through Five Timeless Cities</h3>
@@ -17,18 +17,18 @@
 
 <br>
 
-<pre style="font-size:15px; line-height:1.15; font-weight:600;">
+<pre style="font-size:15px; line-height:1.15; font-weight:600;">ine-height:1.15; font-weight:600;">
 BANGALORE ✈️   →   BUDAPEST
     │
       │  
     (Train)
     ▼
-BRATISLAVA ───► VIENNA (Day Trip)
+BRATISLAVA ───► VIENNA (Day Trip)rip)
     │
       │  
      (Train)
     ▼
-  PRAGUE
+PRAGUE
     │
       │  
      (Train)
