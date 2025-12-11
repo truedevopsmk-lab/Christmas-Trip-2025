@@ -1,58 +1,38 @@
 name: Inject Navigation Menu
 
-# Only run for human pushes / manual dispatch; prevents race loops from bot commits
-
 on:
-push:
-branches: [ main ]
-workflow_dispatch:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 
-# Allow only one concurrent run per repo to avoid conflicts
-
-concurrency:
-group: inject-nav-${{ github.repository }}
-cancel-in-progress: true
-
+# allow the job to push back to the repo
 permissions:
-contents: write    # allow committing back to the repo
+  contents: write
 
 jobs:
-inject:
-if: ${{ github.actor != 'github-actions[bot]' }}
-runs-on: ubuntu-latest
+  inject:
+    # do not run this job when the actor is the actions bot (prevents infinite loop)
+    if: ${{ github.actor != 'github-actions[bot]' }}
+    runs-on: ubuntu-latest
 
-```
-steps:
-  - name: Checkout repository
-    uses: actions/checkout@v4
-    with:
-      persist-credentials: true
-      fetch-depth: 0
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-  - name: Set up Python
-    uses: actions/setup-python@v4
-    with:
-      python-version: '3.x'
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
 
-  - name: Ensure scripts dir exists
-    run: |
-      mkdir -p scripts
+      - name: Make injector executable
+        run: chmod +x scripts/inject-nav.sh
 
-  - name: Run generator (produce/update nav in README.md files)
-    id: gen
-    run: |
-      python3 scripts/generate_nav.py
+      - name: Run injector script
+        run: bash scripts/inject-nav.sh
 
-  - name: Show changed files (for logs)
-    run: |
-      git status --porcelain || true
-      git --no-pager diff --name-only HEAD || true
-
-  - name: Commit and push changes (if any)
-    if: ${{ steps.gen.outputs.changed == 'true' }}
-    uses: stefanzweifel/git-auto-commit-action@v5
-    with:
-      commit_message: "chore(ci): auto-update navigation menu"
-      file_pattern: .
-      branch: main
-```
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Auto-updated navigation menu"
