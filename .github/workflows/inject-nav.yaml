@@ -1,92 +1,48 @@
 name: Inject Navigation Menu
 
+# Run on pushes to main and via manual dispatch
 on:
   push:
-    branches: [ main ]
+    branches: [ "main" ]
   workflow_dispatch:
+
+# Allow workflow to write back to repo (required for commit)
+permissions:
+  contents: write
+
+# Avoid concurrent runs colliding
+concurrency:
+  group: inject-nav-${{ github.repository }}
+  cancel-in-progress: false
 
 jobs:
   inject:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Install jq
-        run: sudo apt-get install -y jq
-
-      - name: Build & Inject Navigation Menu
-        shell: bash
-        run: |
-          set -e
-
-          REPO_NAME=$(basename "$GITHUB_REPOSITORY")
-          USER_NAME=$(echo "$GITHUB_REPOSITORY" | cut -d'/' -f1)
-          BASE_URL="https://${USER_NAME}.github.io/${REPO_NAME}"
-
-          echo "Building navigation menu..."
-
-          NAV_START="<!-- NAV-START -->"
-          NAV_END="<!-- NAV-END -->"
-
-          NAV_CONTENT="$NAV_START
-## 📘 Navigation Menu
-[🏠 Home](${BASE_URL}/) • "
-
-          declare -a entries=()
-
-          # Scan repo for README.md
-          while IFS= read -r -d '' readme; do
-            folder=$(dirname "$readme")
-
-            # Skip root README
-            if [[ "$folder" == "." ]]; then
-              continue
-            fi
-
-            title=$(basename "$folder" | sed 's/-/ /g')
-            encoded=$(printf "%s" "$folder" | jq -sRr @uri)
-
-            entries+=("$title|$encoded")
-          done < <(find . -type f -name "README.md" -print0)
-
-          # Sort alphabetically
-          IFS=$'\n' sorted=($(sort <<<"${entries[*]}"))
-          unset IFS
-
-          # Build links
-          for entry in "${sorted[@]}"; do
-            name="${entry%%|*}"
-            encoded="${entry##*|}"
-            NAV_CONTENT+="[${name}](${BASE_URL}/${encoded}/) • "
-          done
-
-          NAV_CONTENT+="
----
-$NAV_END
-"
-
-          echo "$NAV_CONTENT" > nav_block.md
-
-          echo "Injecting navigation menu…"
-
-          # Rewrite every README.md
-          while IFS= read -r -d '' file; do
-            tmp=$(mktemp)
-
-            # Remove any previous NAV block
-            awk -v start="$NAV_START" -v end="$NAV_END" '
-              $0 ~ start {inblock=1; next}
-              $0 ~ end   {inblock=0; next}
-              !inblock {print}
-            ' "$file" > "$tmp"
-
-            # Prepend fresh nav
-            cat nav_block.md "$tmp" > "$file"
-
-            echo "Updated: $file"
-          done < <(find . -type f -name README.md -print0)
-
-      - uses: stefanzweifel/git-auto-commit-action@v5
+      - name: Checkout repository (with push credentials)
+        uses: actions/checkout@v4
         with:
-          commit_message: "Refreshed navigation menu"
+          # keep the GITHUB_TOKEN credentials so commit/push works
+          persist-credentials: true
+          fetch-depth: 0
+
+      - name: Ensure scripts are executable
+        run: |
+          chmod +x scripts/inject-nav.sh || true
+
+      - name: Install dependencies (jq)
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y jq
+
+      - name: Run injector script
+        # keep shell/bash to preserve behaviour
+        run: |
+          bash scripts/inject-nav.sh
+
+      - name: Commit & push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Auto-updated navigation menu"
+          # leave default token; will use GITHUB_TOKEN with repo write perms
