@@ -1,1 +1,214 @@
+## 📘 Navigation Menu
+[🏠 Home](https://truedevopsmk-lab.github.io/Christmas-Trip-2025/) • [3 Day Budapest Itinerary (Dec 21–23)](https://truedevopsmk-lab.github.io/Christmas-Trip-2025/3-Day%20Budapest%20Itinerary%20%28Dec%2021%E2%80%9323%29/) • [Attractions, Cafés & Local Specialties](https://truedevopsmk-lab.github.io/Christmas-Trip-2025/Attractions%2C%20Caf%C3%A9s%20%26%20Local%20Specialties/) • [Budapest Coffee + Pastry Crawl](https://truedevopsmk-lab.github.io/Christmas-Trip-2025/Budapest%20Coffee%20%2B%20Pastry%20Crawl/) • [Budapest Time of the Day Itinerary](https://truedevopsmk-lab.github.io/Christmas-Trip-2025/Budapest-Time-of-the-Day-Itinerary/) • [Overview   Itinerary](https://truedevopsmk-lab.github.io/Christmas-Trip-2025/Overview%20-%20Itinerary/) • [Test Folder Delete this](https://truedevopsmk-lab.github.io/Christmas-Trip-2025/Test-Folder-Delete-this/) • [Trip Packing Checklist](https://truedevopsmk-lab.github.io/Christmas-Trip-2025/Trip%20Packing%20Checklist/) • [you can delete this](https://truedevopsmk-lab.github.io/Christmas-Trip-2025/you%20can%20delete%20this/) •
+
+---
+<!-- inject-nav -->
+
+---
+A beautifully curated 10-day winter Eurotrip covering **Budapest → Bratislava (+Vienna) → Prague → Wrocław** from **21 Dec 2025 to 31 Dec 2025**.
+
+This site tracks all trip details — flights, days, routes, markets, checklists, and logistics.
+
+---
+
+## 🧭  **Trip Overview**
+
+**Dates:** 21 Dec 2025 → 01 Jan 2026  
+**PNR:** `XXXXX`  
+**Passengers:**  
+- **Muthukumar Sambandam** — Ticket 2202236467432-xx  
+- **Shivani Kakhandki** — Ticket 2202236467434-xx  
+
+**Route:**  
+**Budapest → Bratislava → Vienna (day-trip) → Bratislava → Prague → Wrocław → Bangalore**
+
+
+---
+<div align="center">
+---
+<h1>✨🎄☃️ EUROPE WINTER TRIP 2025 ☃️🎄✨</h1>
+<h3>A Curated Journey Through Five Timeless Cities</h3>
+
+<h2>Budapest • Bratislava • Vienna • Prague • Wrocław</h2>
+
+<h4>21 December 2025 → 1 January 2026</h4>
+
+<br>
+
+<pre style="font-size:15px; line-height:1.15; font-weight:600;">ine-height:1.15; font-weight:600;">
+BANGALORE ✈️   →   BUDAPEST
+    │
+      │  
+    (Train)
+    ▼
+BRATISLAVA ───► VIENNA (Day Trip)rip)
+    │
+      │  
+     (Train)
+    ▼
+PRAGUE
+    │
+      │  
+     (Train)
+    ▼
+WROCŁAW  ✈️    →  BANGALORE
+</pre>
+
+---
+
+## ✈️ **Flight Plan**
+
+### **Outbound — BLR → BUD (21 Dec 2025)**  
+
+| Segment | Flight | Aircraft | Time | Notes |
+|--------|--------|----------|------|-------|
+| BLR → MUC | LH765 | A350-900 | 02:50 → 08:10 | Layover 3h10m |
+| MUC → BUD | LH1676 | A320 | 11:20 → 12:35 | Arrive Budapest |
+
+
+### **Return — WRO → BLR (31 Dec 2025 → 01 Jan 2026)**  
+| Segment | Flight | Aircraft | Time | Notes |
+|--------|--------|----------|------|-------|
+| WRO → MUC | LH1635 | CRJ900 | 06:00 → 07:10 | Layover 5h05m |
+| MUC → BLR | LH764 | A350-900 | 12:15 → 01:05 (+1) | Arrive BLR 01:05 |
+
+
+**Baggage:** 1×23kg checked · 1×8kg carry-on · 1 personal item
+
+
+---
+
+## 🗓️ **Final Itinerary (City-by-City)**
+
+### **21 Dec — Arrive Budapest 🇭🇺**
+- Land 12:35 → check-in → Basilica Market → Vörösmarty Market  
+- Evening thermal bath (Gellért / Rudas)
+
+### **22 Dec — Budapest**
+- Castle Hill, Fisherman's Bastion, Matthias Church  
+- Chain Bridge → Great Market Hall  
+- Evening markets + optional ruin bar
+
+---
+
+### **23 Dec — Budapest (Buffer Day)**
+- Light sightseeing / museums / shopping  
+- Prepare for next-day travel
+
+---
+
+### **24 Dec — Budapest → Bratislava → Vienna Day Trip 🇸🇰🇦🇹**
+- Morning train **Budapest → Bratislava (2.5–3 hrs)**  
+- Drop bags, then **Bratislava → Vienna (≈1 hr)**  
+- Explore Vienna Christmas markets (Rathausplatz, Stephansplatz)  
+- **Return late evening to Bratislava**
+
+---
+
+### **25 Dec — Christmas in Bratislava**
+- Slow Old Town walk, cafes, riverfront  
+- Limited openings → relaxed Christmas vibes
+
+---
+
+### **26 Dec — Bratislava (Full Day)**
+- Explore Bratislava properly (Devin Castle if open)  
+- Prep trains for next morning
+
+---
+
+### **27 Dec — Bratislava → Prague 🇨🇿**
+- Morning train (~3.5–4 hrs)  
+- Afternoon: Charles Bridge, Old Town Square, Christmas markets  
+- Night stay in Prague
+
+---
+
+### **28 Dec — Prague → Wrocław 🇵🇱**
+- Morning free in Prague  
+- Train to Wrocław (~4–5 hrs)  
+- Evening wander around Rynek (Old Town Square)
+
+---
+
+### **29–30 Dec — Wrocław (3 nights total)**
+- Market Square, Cathedral Island, Racławice Panorama  
+- Optional Kraków day trip on the 30th  
+- Cozy cafes & winter markets
+
+---
+
+### **31 Dec — Depart Wrocław → BLR**
+- Early flight 06:00 → MUC → BLR  
+- Arrive **01 Jan 2026, 01:05**
+
+---
+
+## 🎄 **Christmas Market Notes**
+
+- **Budapest:** Basilica & Vörösmarty markets alive during your stay  
+- **Vienna:** Markets run until ~Dec 26  
+- **Bratislava:** Active through late Dec  
+- **Prague:** Runs till early January  
+- **Wrocław:** Runs **21 Nov → 7 Jan**
+
+**Note:** 24–26 Dec = earlier closures & limited restaurants. Markets remain the best food & activity options.
+
+---
+
+## 🚆 **Inter-City Travel Summary**
+
+| Route | Duration | Notes |
+|-------|----------|-------|
+| Budapest → Bratislava | 2.5–3 hrs | Frequent trains |
+| Bratislava → Vienna | ~1 hr | Perfect for a day trip |
+| Bratislava → Prague | 3.5–4 hrs | Book morning departure |
+| Prague → Wrocław | 4–5 hrs | Direct / 1-change options |
+
+**Recommended platforms:**  
+**ÖBB**, **RegioJet**, **Trainline**, **RailEurope**
+
+---
+
+## 🧰 **Logistics & Prep Checklist**
+
+### Before Trip
+- Install **Lufthansa App** → add PNR  
+- Set reminder for **API submission** (opens 23 hr before departure)  
+- Book all trains (high Christmas demand)  
+- Confirm hotels in central districts  
+- Add weather cards for all cities
+
+### Packing Essentials
+- Winter coat, thermals, boots, scarf, gloves  
+- Universal adapter + power bank  
+- Lip balm & moisturizer (cold climate)  
+- EUR / CZK / PLN / HUF (small amounts)
+
+---
+
+## 🗃️ **Files / Links This Repo May Include**
+- `/itinerary/` → detailed day-plans  
+- `/trains/` → recommended trains, timings, booking links  
+- `/packing/` → packing checklist  
+- `/budget/` → estimated spend tracker  
+- `/maps/` → key map screenshots or GPX routes  
+- `/photos/` → trip gallery (post-trip)
+
+---
+
+## ⭐ **Next Actions**
+- [ ] Add booking confirmations  
+- [ ] Add train schedules & preferences  
+- [ ] Add restaurant shortlist per city  
+- [ ] Add packing list file  
+- [ ] Add “Live Weather Widget” if using a GitHub Pages theme  
+
+---
+
+Tickets: https://github.com/truedevopsmk-lab/Eurotripv6
+
+---
+
+### **Created with ❤️ by Muthu & Shivani’s Travel Brain**
 
