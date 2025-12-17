@@ -4,10 +4,7 @@
 ---
 <!-- inject-nav -->
 
----
-
 # ✨🎄☃️ EUROPE WINTER TRIP 2025 ☃️🎄✨
-
 ### A Curated Journey Through Five Timeless Cities  
 **Budapest • Bratislava • Vienna • Prague • Wrocław**
 
@@ -39,7 +36,7 @@ This site tracks **flights, routes, Christmas markets, logistics, packing, and d
 
 <div align="center">
 
-```text
+````
 BANGALORE ✈️ → BUDAPEST
      │
    (Train)
@@ -54,7 +51,8 @@ PRAGUE
      ▼
 WROCŁAW ✈️ → BANGALORE
 
-```
+
+````
 </div>
 
 ---
