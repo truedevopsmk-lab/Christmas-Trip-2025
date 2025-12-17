@@ -4,6 +4,48 @@
 ---
 <!-- inject-nav -->
 
+---
+<div align="center">
+---
+<h1>✨🎄☃️ EUROPE WINTER TRIP 2025 ☃️🎄✨</h1>
+<h3>A Curated Journey Through Five Timeless Cities</h3>
+
+<h2>Budapest • Bratislava • Vienna • Prague • Wrocław</h2>
+
+<h4>21 December 2025 → 1 January 2026</h4>
+
+<h3>Muthukumar Sambandam &amp; Shivani Kakhandki</h3>
+
+<br>
+
+<pre style="font-size:15px; line-height:1.15; font-weight:600;">ine-height:1.15; font-weight:600;">
+BANGALORE ✈️   →   BUDAPEST
+    │
+      │  
+    (Train)
+    ▼
+BRATISLAVA ───► VIENNA (Day Trip)rip)
+    │
+      │  
+     (Train)
+    ▼
+PRAGUE
+    │
+      │  
+     (Train)
+    ▼
+WROCŁAW  ✈️    →  BANGALORE
+</pre>
+
+<br>
+
+<h4>Lufthansa Booking Reference: <b>XXXXX</b></h4>
+
+<hr style="width:60%;margin-top:25px;">
+
+</div>
+
+
 # ✨🎄☃️ EUROPE WINTER TRIP 2025 ☃️🎄✨
 ### A Curated Journey Through Five Timeless Cities  
 **Budapest • Bratislava • Vienna • Prague • Wrocław**
