@@ -1,0 +1,40 @@
+name: Inject Navigation Menu
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: inject-nav-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  inject:
+    # don't run when the committer is the bot to prevent loops
+    if: ${{ github.actor != 'github-actions[bot]' }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Install dependencies
+        run: sudo apt-get update && sudo apt-get install -y jq python3
+
+      - name: Run nav generator
+        env:
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          python3 scripts/generate_nav.py
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Auto-update navigation menu"

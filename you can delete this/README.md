@@ -1,0 +1,7 @@
+## 📘 Navigation Menu
+[🏠 Home](https://truedevopsmk-lab.github.io/Christmas-Trip-2025/) • [3 Day Budapest Itinerary (Dec 21–23)](https://truedevopsmk-lab.github.io/Christmas-Trip-2025/3-Day%20Budapest%20Itinerary%20%28Dec%2021%E2%80%9323%29/) • [Attractions, Cafés & Local Specialties](https://truedevopsmk-lab.github.io/Christmas-Trip-2025/Attractions%2C%20Caf%C3%A9s%20%26%20Local%20Specialties/) • [Budapest Coffee + Pastry Crawl](https://truedevopsmk-lab.github.io/Christmas-Trip-2025/Budapest%20Coffee%20%2B%20Pastry%20Crawl/) • [Budapest Time of the Day Itinerary](https://truedevopsmk-lab.github.io/Christmas-Trip-2025/Budapest-Time-of-the-Day-Itinerary/) • [Overview   Itinerary](https://truedevopsmk-lab.github.io/Christmas-Trip-2025/Overview%20-%20Itinerary/) • [Test Folder Delete this](https://truedevopsmk-lab.github.io/Christmas-Trip-2025/Test-Folder-Delete-this/) • [Trip Packing Checklist](https://truedevopsmk-lab.github.io/Christmas-Trip-2025/Trip%20Packing%20Checklist/) • [you can delete this](https://truedevopsmk-lab.github.io/Christmas-Trip-2025/you%20can%20delete%20this/) •
+
+---
+<!-- inject-nav -->
+
+delete this folder when you see this
