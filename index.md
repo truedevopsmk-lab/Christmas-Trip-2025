@@ -37,6 +37,8 @@ This site tracks **flights, routes, Christmas markets, logistics, packing, and d
 
 ## 🗺️ Route Map (Conceptual)
 
+<div align="center">
+
 ```text
 BANGALORE ✈️ → BUDAPEST
      │
@@ -51,7 +53,9 @@ PRAGUE
    (Train)
      ▼
 WROCŁAW ✈️ → BANGALORE
-````
+
+```
+</div>
 
 ---
 
