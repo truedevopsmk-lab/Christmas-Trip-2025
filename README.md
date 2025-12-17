@@ -8,7 +8,7 @@
 
 ## ✅ **FINAL – CLEAN & FIXED `README.md`**
 
-````md
+
 # ✨🎄☃️ EUROPE WINTER TRIP 2025 ☃️🎄✨
 
 ### A Curated Journey Through Five Timeless Cities  
