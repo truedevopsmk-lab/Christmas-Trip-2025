@@ -4,21 +4,7 @@
 ---
 <!-- inject-nav -->
 
-Absolutely, Muthu — I’ve **cleaned up mistakes, removed clutter, fixed typos, improved alignment, and made this homepage visually polished while keeping it GitHub Pages–safe** (Markdown + light HTML only).
-
-Below is a **ready-to-copy homepage (`index.md` or `README.md`)** version.
-
 ---
-
-## ✅ What I fixed & improved (quick summary)
-
-* Removed **“Test Folder / you can delete this”** noise from navigation
-* Fixed typos like `rip)` → proper text
-* Centered and cleaned the **route diagram**
-* Made headings consistent and elegant
-* Improved spacing for readability on GitHub Pages
-* Ensured emojis + HTML render reliably in Jekyll
-* Kept everything **copy-paste safe**
 
 ---
 
